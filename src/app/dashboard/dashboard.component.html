@@ -1,0 +1,25 @@
+<div class="container-fluid" style="background-color: var(--primary);">
+    <div class="row d-flex flex-row flex-nowrap mx-2" style="overflow-x: scroll; background : var(--primary); ">
+        <div class="col-sm-3 pb-1 p-4" *ngFor="let venue of venues;" (click)="showTable(venue)" >
+            <div class="card mx-1 p-2">
+                <div class="row">
+                    <div class="col-8 py-3">
+                        <h4 style="white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 200px;cursor: pointer;"  data-toggle="tooltip" data-placement="top" title="Venue 111111111111">Venue 1 XYZXYZ</h4>
+                        <h3>1030</h3>
+                        <p>Number of Persons</p>
+                    </div>
+                    <div class="col-4 align-self-center">
+                        <img src="{{__dirname}}assets/icons/location.svg" alt="location" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <app-details-table [getData]="data"></app-details-table>
+</div>

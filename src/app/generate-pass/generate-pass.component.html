@@ -1,0 +1,101 @@
+<div class="container">
+
+    <div class="col-12 mt-3">
+        <div class="row">
+            <div class="col-6">
+                <h4>Generate Pass</h4>
+            </div>
+            <div class="col-6">
+                <!-- <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="Single" checked>Single</mat-radio-button>&nbsp;&nbsp;
+                    <mat-radio-button value="Bulk">Bulk</mat-radio-button>
+                </mat-radio-group> -->
+                <input type="radio" checked name="a">&nbsp;&nbsp; <span style="font-weight: 500;font-size: smaller;" class="mr-5">Single</span> <input type="radio" name="a" (click)="bulkData()">&nbsp;&nbsp; <span style="font-weight: 500;font-size: smaller;">Bulk</span>
+                <button class="btn pl-4 pr-4 float-right" style="background-color: var(--primary);color: white;" (click)="closeDialog()">Cancel</button>
+            </div>
+
+        </div>
+
+    </div>
+    <hr style="border: 1px solid black;border-radius: 2px; width: 100%;">
+    <form [formGroup]="passGenerationForm" (ngSubmit)="onSubmit()">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label>Bukle Number/Id Number: </label>
+                        <input type="number" class="form-control" formControlName="id_number" name="id_number" placeholder="Bukle Number/Id Number">
+                        <strong *ngIf="(!passGenerationForm.controls['id_number'].valid) && (passGenerationForm.controls['id_number'].touched) " class="text-danger ">Buckel No/ID Number is required.</strong>
+
+                    </div><br>
+                    <div class="form-group">
+                        <label>Name: </label>
+                        <input type="text" class="form-control" formControlName="name" name="name" placeholder="Name">
+                        <strong *ngIf="(!passGenerationForm.controls['name'].valid) && (passGenerationForm.controls['name'].touched) " class="text-danger ">Name is required.</strong>
+
+                    </div><br>
+                    <div class="form-group">
+                        <label>Mobile: </label>
+                        <input type="number" class="form-control" formControlName="mobile" name="mobile" placeholder="Mobile">
+                        <strong *ngIf="(!passGenerationForm.controls['mobile'].valid) && (passGenerationForm.controls['mobile'].touched) " class="text-danger ">Mobile is required.</strong>
+
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label>Station: </label>
+                        <input type="text" class="form-control" formControlName="station" name="station" placeholder="Station">
+                        <strong *ngIf="(!passGenerationForm.controls['station'].valid) && (passGenerationForm.controls['station'].touched) " class="text-danger ">Station is required.</strong>
+
+                    </div><br>
+                    <div class="form-group">
+                        <label>Place Duty: </label>
+                        <input type="text" class="form-control"  formControlName="duty_place" name="duty_place" placeholder="Place Duty">
+                        <strong *ngIf="(!passGenerationForm.controls['duty_place'].valid) && (passGenerationForm.controls['duty_place'].touched) " class="text-danger ">Duty Place is required.</strong>
+
+                    </div><br>
+                    <div class="form-group">
+                        <label>Start Date: </label>
+                        <input type="date" class="form-control" formControlName="start_date" name="start_date">
+                        <strong *ngIf="(!passGenerationForm.controls['start_date'].valid) && (passGenerationForm.controls['start_date'].touched) " class="text-danger ">Start Date is required.</strong>
+
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label>End Date: </label>
+                        <input type="date" class="form-control" formControlName="end_date" name="end_date">
+                        <strong *ngIf="(!passGenerationForm.controls['end_date'].valid) && (passGenerationForm.controls['end_date'].touched) " class="text-danger ">End Date is required.</strong>
+
+                    </div><br>
+                    <div class="form-group">
+                        <b>Duration: </b><br>
+                        <label>Start Time: </label>
+                        <input type="time" class="form-control" formControlName="start_time" name="duration" placeholder="Duration">
+                        <strong *ngIf="(!passGenerationForm.controls['start_time'].valid) && (passGenerationForm.controls['start_time'].touched) " class="text-danger ">Start Time is required.</strong>
+                        <br>
+                        <label>End Time: </label>
+                        <input type="time" class="form-control" formControlName="end_time" name="duration" placeholder="Duration">
+                        <strong *ngIf="(!passGenerationForm.controls['end_time'].valid) && (passGenerationForm.controls['end_time'].touched) " class="text-danger ">End Time is required.</strong>
+
+                    </div><br>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="row">
+                <div class="col-8"></div>
+                <div class="col-4">
+                    <div class="form-group mt-4 ml-5">
+                        <button class="btn mr-3 pl-4 pr-4" style="background-color: var(--primary);color: white;" [disabled]="!passGenerationForm.valid">Generate</button>
+                        <!-- <button class="btn pl-4 pr-4" style="background-color: var(--primary);color: white;" (click)="closeDialog()">Cancel</button> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+    
+
+</div>

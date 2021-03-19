@@ -1,0 +1,78 @@
+<div class="container">
+
+    <div class="col-12 mt-3">
+        <div class="row">
+            <div class="col-6">
+                <h4>Generate Pass</h4>
+            </div>
+            <div class="col-6">
+                <!-- <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="Single" checked>Single</mat-radio-button>&nbsp;&nbsp;
+                    <mat-radio-button value="Bulk">Bulk</mat-radio-button>
+                </mat-radio-group> -->
+                <input type="radio" checked name="a">&nbsp;&nbsp; <span style="font-weight: 500;font-size: smaller;" class="mr-5">Single</span> <input type="radio" name="a">&nbsp;&nbsp; <span style="font-weight: 500;font-size: smaller;">Bulk</span>
+            </div>
+
+        </div>
+
+    </div>
+    <hr style="border: 1px solid black;border-radius: 2px; width: 100%;">
+    <form action="">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label>Bukle Number/Id Number: </label>
+                        <input type="number" class="form-control" name="firstname" placeholder="Bukle Number/Id Number">
+                    </div><br>
+                    <div class="form-group">
+                        <label>Name: </label>
+                        <input type="text" class="form-control" name="firstname" placeholder="Name">
+                    </div><br>
+                    <div class="form-group">
+                        <label>Mobile: </label>
+                        <input type="number" class="form-control" name="firstname" placeholder="Mobile">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label>Station: </label>
+                        <input type="text" class="form-control" name="firstname" placeholder="Station">
+                    </div><br>
+                    <div class="form-group">
+                        <label>Place Duty: </label>
+                        <input type="text" class="form-control" name="firstname" placeholder="Place Duty">
+                    </div><br>
+                    <div class="form-group">
+                        <label>Start Date: </label>
+                        <input type="date" class="form-control" name="firstname">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label>End Date: </label>
+                        <input type="date" class="form-control" name="firstname">
+                    </div><br>
+                    <div class="form-group">
+                        <label>Duration: </label>
+                        <input type="text" class="form-control" name="firstname" placeholder="Duration">
+                    </div><br>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="row">
+                <div class="col-8"></div>
+                <div class="col-4">
+                    <div class="form-group mt-4 ml-5">
+                        <button class="btn mr-3 pl-4 pr-4" style="background-color: var(--primary);color: white;">Edit</button>
+                        <button class="btn pl-4 pr-4" style="background-color: var(--primary);color: white;" (click)="closeDialog()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+</div>
